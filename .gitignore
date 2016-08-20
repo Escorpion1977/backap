@@ -1,0 +1,8 @@
+/.idea
+/vendor
+/storage
+.backap.yaml
+php_errors.log
+box.phar
+backap.phar
+backap.phar.gz

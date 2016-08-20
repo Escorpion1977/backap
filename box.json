@@ -1,0 +1,23 @@
+{
+    "chmod": "0755",
+    "compression": "GZ",
+    "directories": [
+        "src"
+    ],
+    "files": [
+        "/src/.backap.yaml.example",
+        "/vendor/herrera-io/phar-update/res/schema.json",
+        "/vendor/dropbox/dropbox-sdk/lib/Dropbox/certs/trusted-certs.crt"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": ["Tests", "tests", "readme.md"],
+            "in": "vendor"
+        }
+    ],
+    "git-version": "package_version",
+    "main": "bin/backap",
+    "output": "backap.phar",
+    "stub": true
+}

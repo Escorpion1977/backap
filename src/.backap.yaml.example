@@ -1,0 +1,50 @@
+#/ Backap storage path is the base path where all your backups will be stored. 
+#/ The defined path must be absolute is you need to define one.
+#/ If any path is defined Backap will create a /storage/database folder
+#/ relative to the execution path.
+# backap_storage_path:
+
+#/ You can specify your mysqldump path if is not defined globally.
+# mysqldump_path:
+
+#/ You can specify your mysqldump path if is not defined globally.
+# mysql_path:
+
+#/ You can enable compression for all your backups by default.
+#/ Compression is disabled by default.
+# enable_compression: true
+
+#/ You can declare a specific timezone.
+#/ UTC will be used as default.
+# timezone: America/Lima
+
+#/ Here you must declare your default connection name from the
+#/ connections declared below in the connections array
+default_connection: myconnection
+
+#/ Here you can define your database connections, you can name it like you want
+connections:
+  myconnection:
+    hostname:
+    port:
+    database:
+    username:
+    password:
+  # secondconnection:
+  #   hostname:
+  #   port:
+  #   database:
+  #   username:
+  #   password:
+
+#/ Cloud providers are defined to use the cloud-storage feature.
+#/ By the moment this file was written Backap only supports 
+#/ Dropbox as cloud provider, different providers
+#/ will be eventually added.
+
+# cloud:
+#   dropbox:
+#     provider: dropbox
+#     access_token: your_access_token
+#     app_secret: your_secret
+#     path: /path/on/your/dropbox

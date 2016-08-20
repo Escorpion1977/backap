@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+if (PHP_SAPI !== 'cli') {
+    echo 'Warning: Backap should be invoked via the CLI version of PHP, not the '.PHP_SAPI.' SAPI'.PHP_EOL;
+    die();
+}
+define("WORKING_DIR", getcwd());
+require __DIR__.'/../src/bootstrap.php';
+use Backap\Application;
+$application = new Application();
