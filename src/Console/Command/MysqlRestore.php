@@ -227,7 +227,7 @@ class MysqlRestore extends Command
                 } else {
                     $selectedFiles = [];
                     foreach ($this->backupFileNames as $index => $backupFileName) {
-                        if (ends_with($backupFileName, '_' . $this->connection['database'] . '.sql') || ends_with($backupFileName, '_' . $this->connection['database'] . 'sql.gz')) {
+                        if (ends_with($backupFileName, '_' . $this->connection['database'] . '.sql') || ends_with($backupFileName, '_' . $this->connection['database'] . '.sql.gz')) {
                             array_push($this->backupFileAlternatives, $backupFileName);
                             array_push($selectedFiles, $this->backupFiles[$index]);
                         }
